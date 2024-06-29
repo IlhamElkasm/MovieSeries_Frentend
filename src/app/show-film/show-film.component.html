@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div *ngFor="let film of films" class="col-md-4">
+        <div class="card mb-4">
+          <img src="assets/img/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ film.titre }}</h5>
+            <p class="card-text">{{ film.description }}</p>
+            <p class="card-text">{{ film.acteurs }}</p>
+            <p class="card-text">{{ film.dateSortie }}</p>
+            <p class="card-text">{{ film.note }}</p>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+
+ 
+   
