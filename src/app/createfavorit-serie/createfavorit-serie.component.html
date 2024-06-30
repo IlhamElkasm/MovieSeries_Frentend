@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center">Add Favorite Serie</h2>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="idSirie">Serie ID</label>
+            <input type="number" id="idSirie" [(ngModel)]="favoriteSerie.idSirie" name="idSirie" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

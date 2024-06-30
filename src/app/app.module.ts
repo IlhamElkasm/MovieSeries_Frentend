@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SerieComponent } from './serie/serie.component';
 import { FavoriteFilmComponent } from './favorite-film/favorite-film.component';
 import { CreateFavoriteFilmComponent } from './create-favorite-film/create-favorite-film.component';
+import { AfficherSerieComponent } from './afficher-serie/afficher-serie.component';
+import { CreatefavoritSerieComponent } from './createfavorit-serie/createfavorit-serie.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { CreateFavoriteFilmComponent } from './create-favorite-film/create-favor
     SerieComponent,
     FavoriteFilmComponent,
     CreateFavoriteFilmComponent,
+    AfficherSerieComponent,
+    CreatefavoritSerieComponent,
     
   ],
   imports: [
