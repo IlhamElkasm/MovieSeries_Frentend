@@ -8,17 +8,17 @@ import { FavoriteFilm } from '../Model/FavoriteFilm';
 })
 export class FavoriteFilmServiceService {
 
-  private baseURL = "http://localhost:8090/api/favoriteFilm";
-  private baseURLC = "http://localhost:8090/api/favoriteFilm/add";
+  private baseURLC = "http://localhost:8090/api/favoriteFilm";
+ 
 
   constructor(private httpClient: HttpClient) { }
   
   getFavoriteFList(): Observable<FavoriteFilm[]>{
-    return this.httpClient.get<FavoriteFilm[]>(`${this.baseURL}`);
+    return this.httpClient.get<FavoriteFilm[]>(`${this.baseURLC}`);
   }
   
   createFavoriteF(favoritefilm: FavoriteFilm): Observable<Object>{
-    return this.httpClient.post(`${this.baseURLC}`, favoritefilm);
+    return this.httpClient.post(`${this.baseURLC}/add`, favoritefilm);
   }
 
 

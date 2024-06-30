@@ -1,5 +1,6 @@
 export class FavoriteFilm{
 
-    "idFilm":1;
-    "idUser":'';
+    idFavoriF?: number;
+    idFilm: number =1;
+    idUser: number = 0;
 }

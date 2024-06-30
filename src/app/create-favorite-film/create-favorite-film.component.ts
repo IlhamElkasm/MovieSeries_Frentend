@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FavoriteFilm } from '../Model/FavoriteFilm';
-import { FavoriteFilmServiceService } from '../Service/favorite-film-service.service';
+import { FavoriteFilm } from '../Model/FavoriteFilm'; 
+import { FavoriteFilmServiceService } from '../Service/favorite-film-service.service'; 
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,28 +10,28 @@ import { Router } from '@angular/router';
 })
 export class CreateFavoriteFilmComponent implements OnInit {
 
-  favoritefilm: FavoriteFilm = new FavoriteFilm();
+  favoriteFilm: FavoriteFilm = new FavoriteFilm();
   
-  constructor(private serviceFavoriteF: FavoriteFilmServiceService,
-    private router: Router) { }
+  constructor(private favoriteFilmService: FavoriteFilmServiceService, private router: Router) { }
 
   ngOnInit(): void {
+    this.favoriteFilm.idUser = 1; // Set the user ID to 1
   }
 
-  saveFavoriteF(){
-    this.serviceFavoriteF.createFavoriteF(this.favoritefilm).subscribe( data =>{
+  saveFavoriteF(): void {
+    this.favoriteFilmService.createFavoriteF(this.favoriteFilm).subscribe((data: any) => {
       console.log(data);
       this.goToFavoriteFList();
     },
-    error => console.log(error));
+    (error: any) => console.log(error));
   }
 
-  goToFavoriteFList(){
-    this.router.navigate(['/favoritefilm']);
+  goToFavoriteFList(): void {
+    this.router.navigate(['/favoriteFilm']);
   }
   
-  onSubmit(){
-    console.log(this.favoritefilm);
+  onSubmit(): void {
+    console.log(this.favoriteFilm);
     this.saveFavoriteF();
   }
 }

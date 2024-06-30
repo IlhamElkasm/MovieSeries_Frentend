@@ -1,1 +1,16 @@
-<p>favorite-film works!</p>
+<div class="container">
+    <div class="row">
+      <div *ngFor="let FavoriteFilm of favoritefilm" class="col-md-4">
+        <div class="card mb-4">
+          <img src="assets/img/2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ FavoriteFilm.idFilm }}</h5>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

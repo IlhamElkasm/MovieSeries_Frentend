@@ -1,1 +1,14 @@
-<p>create-favorite-film works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center">Add Favorite Film</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="idFilm">Film ID</label>
+          <input type="number" id="idFilm" [(ngModel)]="favoriteFilm.idFilm" name="idFilm" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
